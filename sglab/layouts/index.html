@@ -3,18 +3,19 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body>
+<body id="myPage">
   <header>
     {{ partial "header.html" . }}
-    {{ partial "project.html" . }}
-    {{ partial "team.html" . }}
+    {{ partial "navbar.html" . }}
   </header>
   <main>
     <!-- {{ block "main" . }}{{ end }} -->
-    
+    {{ partial "project.html" . }}
+    {{ partial "team.html" . }}
   </main>
   <footer>
     {{ partial "footer.html" . }}
   </footer>
+  <script src="/js/main.js"></script>
 </body>
 </html>
