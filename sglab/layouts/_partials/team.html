@@ -1,0 +1,20 @@
+<div class="container-fluid text-center bg-grey">
+  <h3>OUR TEAM</h3>
+  <p><em>We love music!</em></p>
+  <p>We have created a fictional band website. Lorem ipsum..</p>
+  <br>
+
+  <div class="row">
+    {{ range $index, $member := where .Site.RegularPages "Section" "team" }}
+      <div class="col-sm-4">
+        <p><strong>{{ $member.Params.name }}</strong></p><br>
+        <p><strong>{{ $member.Params.role }}</strong></p><br>
+        <img src="{{ $member.Params.image }}" class="img-circle person" alt="{{ $member.Params.name }}">
+      </div>
+      {{ if eq (mod (add $index 1) 3) 0 }}
+    </div>
+    <div class="row">
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

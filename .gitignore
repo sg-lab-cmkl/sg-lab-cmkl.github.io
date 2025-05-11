@@ -1,3 +1,5 @@
 sglab/public/
 sglab/resources/
+sglab/node_modules/
 sglab/.hugo_build.lock
+sglab/package-lock.json
